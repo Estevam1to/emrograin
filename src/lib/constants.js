@@ -16,13 +16,16 @@ export const MARKET_CFG = {
 
   refreshMs: 90_000,
 
-  // Per-symbol display config (decimal places and currency prefix)
+  // Per-symbol display config
+  // buPerTon: conversion factor from US¢/bushel (CBOT) → USD/t (1 MT = X bushels)
+  //   Soy  60 lbs/bu → 1000 / (60 × 0.453592) = 36.7437 bu/t
+  //   Corn 56 lbs/bu → 1000 / (56 × 0.453592) = 39.3683 bu/t
   symbols: {
     USDBRL: { dec: 4, prefix: 'R$ ' },
     EURBRL: { dec: 4, prefix: 'R$ ' },
     CNYBRL: { dec: 4, prefix: 'R$ ' },
-    'ZS=F': { dec: 2, prefix: 'US¢ ' },
-    'ZC=F': { dec: 2, prefix: 'US¢ ' },
+    'ZS=F': { dec: 2, prefix: 'US$ ', buPerTon: 36.7437 },
+    'ZC=F': { dec: 2, prefix: 'US$ ', buPerTon: 39.3683 },
   },
 };
 

@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { TICKER_ITEMS } from '../../lib/content';
 
-function TickerItem({ name, val, chg, dir }) {
+function TickerItem({ name, unit, val, chg, dir }) {
   return (
     <div className="ti">
       <span className="ti-name">{name}</span>
       <span className="ti-val">{val}</span>
+      {unit && <span className="ti-unit">{unit}</span>}
       <span className={`ti-chg ${dir}`}>{chg}</span>
     </div>
   );
@@ -14,13 +15,11 @@ function TickerItem({ name, val, chg, dir }) {
 export default function Ticker({ prices }) {
   const [paused, setPaused] = useState(false);
 
-  const items = TICKER_ITEMS.map(({ sym, label }) => ({
+  const items = TICKER_ITEMS.map(({ sym, label, unit }) => ({
     name: label,
+    unit,
     ...(prices?.[sym] ?? { val: '—', chg: '—', dir: 'ind' }),
   }));
-
-  // Duplicate for seamless loop
-  const doubled = [...items, ...items];
 
   return (
     <div
@@ -29,10 +28,11 @@ export default function Ticker({ prices }) {
       onMouseLeave={() => setPaused(false)}
       aria-label="Cotações ao vivo"
     >
-      <div className="track">
-        {doubled.map((it, i) => (
-          <TickerItem key={i} {...it} />
-        ))}
+      <div className="ticker-inner">
+        <div className="track">
+          {items.map((it, i) => <TickerItem key={`a-${i}`} {...it} />)}
+          {items.map((it, i) => <TickerItem key={`b-${i}`} {...it} />)}
+        </div>
       </div>
     </div>
   );

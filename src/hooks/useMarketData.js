@@ -7,14 +7,16 @@ function initialPrices() {
     USDBRL: { val: 'R$ 5,0000',     chg: '▲ 0,00%',   dir: 'up'  },
     EURBRL: { val: 'R$ 5,4000',     chg: '▲ 0,00%',   dir: 'up'  },
     CNYBRL: { val: 'R$ 0,7000',     chg: '▲ 0,00%',   dir: 'up'  },
-    'ZS=F': { val: 'US¢ 1.050,00',  chg: 'indicativo', dir: 'ind' },
-    'ZC=F': { val: 'US¢ 445,00',    chg: 'indicativo', dir: 'ind' },
+    'ZS=F': { val: 'US$ 385,78',  chg: 'indicativo', dir: 'ind' },
+    'ZC=F': { val: 'US$ 175,19',  chg: 'indicativo', dir: 'ind' },
   };
 }
 
 function buildVal(sym, price) {
-  const { prefix, dec } = MARKET_CFG.symbols[sym];
-  return prefix + fmtBR(price, dec);
+  const { prefix, dec, buPerTon } = MARKET_CFG.symbols[sym];
+  // CBOT prices come in US¢/bushel — convert to USD/t for Brazilian producers
+  const displayPrice = buPerTon ? (price * buPerTon) / 100 : price;
+  return prefix + fmtBR(displayPrice, dec);
 }
 
 function buildChg(pct) {

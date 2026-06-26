@@ -42,20 +42,21 @@ export const HERO = {
 export const MARKET_PANEL = {
   heading: 'Mercado · agora',
   rows: [
-    { sym: 'EURBRL', label: 'EURO · EUR-BRL' },
-    { sym: 'CNYBRL', label: 'YUAN · CHINA' },
-    { sym: 'ZS=F',   label: 'SOJA · CBOT' },
-    { sym: 'ZC=F',   label: 'MILHO · CBOT' },
+    { sym: 'EURBRL', label: 'EURO · EUR-BRL',   unit: 'por 1 EUR' },
+    { sym: 'CNYBRL', label: 'YUAN · CHINA',      unit: 'por 1 CNY' },
+    { sym: 'ZS=F',   label: 'SOJA · CBOT',       unit: '/tonelada' },
+    { sym: 'ZC=F',   label: 'MILHO · CBOT',      unit: '/tonelada' },
   ],
+  heroUsdUnit: 'por 1 USD',
   footer: 'Moedas ao vivo · grãos CBOT indicativos · atualização contínua',
 };
 
 export const TICKER_ITEMS = [
-  { sym: 'USDBRL', label: 'DÓLAR' },
-  { sym: 'EURBRL', label: 'EURO' },
-  { sym: 'CNYBRL', label: 'YUAN · CHINA' },
-  { sym: 'ZS=F',   label: 'SOJA CBOT' },
-  { sym: 'ZC=F',   label: 'MILHO CBOT' },
+  { sym: 'USDBRL', label: 'DÓLAR',        unit: 'por 1 USD' },
+  { sym: 'EURBRL', label: 'EURO',         unit: 'por 1 EUR' },
+  { sym: 'CNYBRL', label: 'YUAN · CHINA', unit: 'por 1 CNY' },
+  { sym: 'ZS=F',   label: 'SOJA CBOT',   unit: '/t' },
+  { sym: 'ZC=F',   label: 'MILHO CBOT',  unit: '/t' },
 ];
 
 export const MARQUEE_ITEMS = [

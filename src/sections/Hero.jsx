@@ -16,16 +16,18 @@ function PriceCard({ usd }) {
           {usd.chg}
         </span>
         <span className="muted">{usd.note}</span>
+        <span className="pc-unit">{MARKET_PANEL.heroUsdUnit}</span>
       </div>
     </div>
   );
 }
 
-function MarketRow({ label, val, chg, dir }) {
+function MarketRow({ label, unit, val, chg, dir }) {
   return (
     <div className="ti">
       <span className="ti-name">{label}</span>
       <span className="ti-val">{val}</span>
+      {unit && <span className="ti-unit">{unit}</span>}
       <span className={`ti-chg ${dir}`}>{chg}</span>
     </div>
   );
@@ -62,21 +64,9 @@ export default function Hero({ heroUSD, prices }) {
               </Button>
             </div>
           </Reveal>
-          <Reveal delay={4}>
-            <div className="hero-strip">
-              {HERO.stats.map((s) => (
-                <div key={s.label} className="hs">
-                  <span className="hs-num">
-                    {s.num}<span className="u">{s.unit}</span>
-                  </span>
-                  <span className="hs-lab">{s.label}</span>
-                </div>
-              ))}
-            </div>
-          </Reveal>
         </div>
 
-        {/* Market panel */}
+        {/* Market panel + stats */}
         <Reveal delay={2} className="hero-visual">
           <div className="mkt-panel ticks">
             <div className="mkt-head">
@@ -90,10 +80,11 @@ export default function Hero({ heroUSD, prices }) {
             <PriceCard usd={heroUSD} />
 
             <div className="mkt-rows">
-              {MARKET_PANEL.rows.map(({ sym, label }) => (
+              {MARKET_PANEL.rows.map(({ sym, label, unit }) => (
                 <MarketRow
                   key={sym}
                   label={label}
+                  unit={unit}
                   val={prices?.[sym]?.val ?? '—'}
                   chg={prices?.[sym]?.chg ?? '—'}
                   dir={prices?.[sym]?.dir ?? 'ind'}
@@ -102,6 +93,18 @@ export default function Hero({ heroUSD, prices }) {
             </div>
 
             <div className="mkt-foot">{MARKET_PANEL.footer}</div>
+          </div>
+
+          {/* Stats below the panel */}
+          <div className="hero-strip">
+            {HERO.stats.map((s) => (
+              <div key={s.label} className="hs">
+                <span className="hs-num">
+                  {s.num}<span className="u">{s.unit}</span>
+                </span>
+                <span className="hs-lab">{s.label}</span>
+              </div>
+            ))}
           </div>
         </Reveal>
       </div>
