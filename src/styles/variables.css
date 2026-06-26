@@ -1,0 +1,97 @@
+/* ─── Design tokens ─────────────────────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg:        #0b0d0a;
+  --bg-2:      #0f120c;
+  --surface:   #14180f;
+  --surface-2: #1b2014;
+  --surface-3: #232a1a;
+
+  /* Borders */
+  --line:   rgba(232, 224, 196, 0.10);
+  --line-2: rgba(232, 224, 196, 0.20);
+  --line-3: rgba(232, 224, 196, 0.32);
+
+  /* Text */
+  --text:       #f4f1e6;
+  --text-dim:   #aeac98;
+  --text-faint: #6f7163;
+
+  /* Brand palette */
+  --gold:    #cda94f;
+  --gold-1:  #ecd596;
+  --gold-2:  #9a7a30;
+  --green:   #46985f;
+  --green-1: #74c389;
+  --green-2: #1c5132;
+  --red:     #d2735f;
+
+  /* Accent (theme-switchable) */
+  --accent:      var(--gold);
+  --accent-1:    var(--gold-1);
+  --accent-soft: rgba(205, 169, 79, 0.13);
+  --accent-line: rgba(205, 169, 79, 0.34);
+
+  /* Shadows */
+  --shadow:    0 22px 60px -24px rgba(0, 0, 0, 0.74);
+  --shadow-lg: 0 50px 110px -34px rgba(0, 0, 0, 0.85);
+
+  /* Radii */
+  --radius:    18px;
+  --radius-sm: 11px;
+  --radius-lg: 30px;
+
+  /* Layout */
+  --maxw: 1320px;
+  --gut:  clamp(20px, 5vw, 76px);
+
+  /* Typography */
+  --font-head: 'Newsreader', Georgia, serif;
+  --font-body: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Space Mono', 'SFMono-Regular', monospace;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* ─── Accent overrides ───────────────────────────────────────────────────── */
+:root[data-accent='green'] {
+  --accent:      var(--green-1);
+  --accent-1:    var(--green-1);
+  --accent-soft: rgba(116, 195, 137, 0.14);
+  --accent-line: rgba(116, 195, 137, 0.36);
+}
+
+/* ─── Heading-font override ─────────────────────────────────────────────── */
+:root[data-heading-font='sans'] {
+  --font-head: 'Archivo', sans-serif;
+}
+
+/* ─── Light theme ────────────────────────────────────────────────────────── */
+:root[data-theme='light'] {
+  --bg:        #f3efe3;
+  --bg-2:      #ece6d6;
+  --surface:   #fdfcf7;
+  --surface-2: #f3eede;
+  --surface-3: #ebe4d0;
+  --line:   rgba(38, 34, 18, 0.12);
+  --line-2: rgba(38, 34, 18, 0.20);
+  --line-3: rgba(38, 34, 18, 0.32);
+  --text:       #181b12;
+  --text-dim:   #54564a;
+  --text-faint: #8a8b7b;
+  --gold:    #91701f;
+  --gold-1:  #b48f34;
+  --gold-2:  #6f5418;
+  --green:   #1d6b3a;
+  --green-1: #246b3c;
+  --green-2: #14492a;
+  --accent-soft: rgba(145, 112, 31, 0.12);
+  --accent-line: rgba(145, 112, 31, 0.34);
+  --shadow:    0 22px 60px -28px rgba(40, 34, 18, 0.30);
+  --shadow-lg: 0 50px 110px -38px rgba(40, 34, 18, 0.34);
+}
+:root[data-theme='light'][data-accent='green'] {
+  --accent:   var(--green);
+  --accent-1: var(--green);
+}
