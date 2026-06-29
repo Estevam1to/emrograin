@@ -3,7 +3,7 @@
 
 export const SITE = {
   name: 'EmroGrain Commodities',
-  email: 'comercial@emrograin.com.br',
+  email: 'comercial@emrograin.com',
   phone: '+55 (99) 98408-0468',
   phoneHref: 'tel:+5599984080468',
   address: '',
