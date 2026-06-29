@@ -175,20 +175,20 @@ export const DEPOIMENTOS = {
     {
       quote: 'Negociar com a EmroGrain é direto e transparente. O pagamento sempre em dia me dá segurança para planejar a próxima safra.',
       name: 'João Mendes',
-      role: 'Produtor de soja · Sorriso/MT',
+      role: 'Produtor de soja · Balsas/MA',
       initials: 'JM',
       featured: true,
     },
     {
       quote: 'A logística deles tirou um peso enorme da nossa cooperativa. Menos perda e mais resultado para o cooperado.',
       name: 'Marina Reis',
-      role: 'Coop. Agro Vale · Rio Verde/GO',
+      role: 'Coop. Agro Vale · Tasso Fragoso/MA',
       initials: 'MR',
     },
     {
       quote: 'Com a proteção de preço e câmbio consegui travar um bom negócio e dormir tranquilo. Parceria de verdade.',
       name: 'Antônio Prado',
-      role: 'Produtor · L. E. Magalhães/BA',
+      role: 'Produtor · São Raimundo das Mangabeiras/MA',
       initials: 'AP',
     },
   ],
