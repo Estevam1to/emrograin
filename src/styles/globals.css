@@ -224,7 +224,7 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.03;
   top: 0; left: 0; right: 0; height: 2px;
   background: linear-gradient(90deg, var(--accent), var(--gold-1) 60%, transparent);
 }
-.hs-num { font-family: var(--font-head); font-size: clamp(22px, 2.2vw, 28px); font-weight: 500; line-height: 1; letter-spacing: -0.02em; }
+.hs-num { font-family: var(--font-head); font-size: var(--fs-h3); font-weight: 500; line-height: 1; letter-spacing: -0.02em; }
 .hs-num .u { color: var(--accent); }
 .hs-lab { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.10em; text-transform: uppercase; color: var(--text-dim); }
 
@@ -240,7 +240,7 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.03;
 }
 .mkt-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 22px; border-bottom: 1px solid var(--line); position: relative; }
 .mkt-head .mh-l { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-dim); }
-.mkt-live { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-1); }
+.mkt-live { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-1); }
 .mkt-live .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green-1); animation: pulse 2.2s infinite; }
 @keyframes pulse {
   0%   { box-shadow: 0 0 0 0   rgba(116, 195, 137, 0.5); }
@@ -252,7 +252,7 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.03;
 .price-card .pc-tk { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; color: var(--text-dim); }
 .price-card .pc-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green-1); }
 .price-card .pc-val { font-family: var(--font-head); font-size: clamp(36px, 4.4vw, 52px); font-weight: 500; margin-top: 10px; letter-spacing: -0.02em; line-height: 1; }
-.price-card .pc-meta { display: flex; align-items: center; gap: 10px; margin-top: 10px; font-size: 12.5px; }
+.price-card .pc-meta { display: flex; align-items: center; gap: 10px; margin-top: 10px; font-size: var(--fs-xs); }
 .price-card .pc-chg { font-weight: 700; }
 .pc-up { color: var(--green-1); } .pc-dn { color: var(--red); }
 .mkt-rows { padding: 6px 8px 8px; }
@@ -267,8 +267,8 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.03;
 .mkt-rows .ti .ti-unit { font-size: 10px; color: var(--text-faint); justify-self: end; letter-spacing: 0.04em; }
 .mkt-rows .ti .ti-chg { justify-self: end; min-width: 72px; text-align: right; font-size: 12px; }
 .ti-chg.up { color: var(--green-1); } .ti-chg.dn { color: var(--red); } .ti-chg.ind { color: var(--text-faint); font-style: italic; }
-.mkt-foot { padding: 13px 22px; border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.08em; color: var(--text-faint); text-transform: uppercase; }
-.price-card .pc-unit { font-family: var(--font-mono); font-size: 10.5px; color: var(--text-faint); letter-spacing: 0.06em; }
+.mkt-foot { padding: 13px 22px; border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--text-faint); text-transform: uppercase; }
+.price-card .pc-unit { font-family: var(--font-mono); font-size: 11px; color: var(--text-faint); letter-spacing: 0.06em; }
 
 /* ─── Ticker ─────────────────────────────────────────────────────────────── */
 .ticker { border-block: 1px solid var(--line); background: var(--bg-2); padding-block: clamp(26px, 4vw, 52px); }
@@ -330,7 +330,7 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.03;
 .bento { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(168px, auto); gap: 16px; margin-top: 56px; }
 .tile {
   position: relative; border: 1px solid var(--line); border-radius: var(--radius);
-  background: var(--surface); padding: 28px; overflow: hidden;
+  background: var(--surface); padding: var(--card-pad); overflow: hidden;
   transition: border-color 0.35s var(--ease), transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
 }
 .tile:hover { border-color: var(--line-2); transform: translateY(-4px); box-shadow: var(--shadow); }
@@ -347,13 +347,13 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.03;
 
 /* ─── Values row ─────────────────────────────────────────────────────────── */
 .values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 16px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
-.value { background: var(--bg); padding: 30px clamp(22px, 2.5vw, 34px); display: flex; flex-direction: column; gap: 12px; transition: background 0.3s; }
+.value { background: var(--bg); padding: var(--card-pad); display: flex; flex-direction: column; gap: 12px; transition: background 0.3s; }
 .value:hover { background: var(--surface); }
 .value .v-top { display: flex; align-items: center; justify-content: space-between; }
 .value .v-ix { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; color: var(--text-faint); }
 .value .v-ic { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); border: 1px solid var(--line); }
 .value .v-ic svg { width: 19px; height: 19px; }
-.value h3 { font-family: var(--font-body); font-size: 16.5px; font-weight: 700; letter-spacing: 0; }
+.value h3 { font-family: var(--font-body); font-size: var(--fs-card-title); font-weight: 700; letter-spacing: 0; }
 .value p { font-size: 14.5px; color: var(--text-dim); }
 
 /* ─── Commodities ────────────────────────────────────────────────────────── */
@@ -367,12 +367,12 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.03;
 .commodity-img { aspect-ratio: 16/8.5; overflow: hidden; border-bottom: 1px solid var(--line); }
 .commodity-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s var(--ease); }
 .commodity:hover .commodity-img img { transform: scale(1.04); }
-.commodity .c-body { padding: clamp(26px, 2.8vw, 38px); }
+.commodity .c-body { padding: var(--card-pad); }
 .commodity .c-top { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
 .commodity .c-tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
 .commodity .c-mkt { font-family: var(--font-mono); font-size: 12px; color: var(--text-faint); }
-.commodity h3 { font-family: var(--font-head); font-size: clamp(30px, 3.6vw, 46px); font-weight: 500; margin: 12px 0; letter-spacing: -0.02em; }
-.commodity p { color: var(--text-dim); font-size: 15.5px; }
+.commodity h3 { font-family: var(--font-head); font-size: var(--fs-product-title); font-weight: 500; margin: 12px 0; letter-spacing: -0.02em; }
+.commodity p { color: var(--text-dim); font-size: 16px; }
 .commodity .specs { display: grid; gap: 1px; margin-top: 24px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .commodity .spec { background: var(--surface); display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 13px 2px; }
 .commodity .spec .sk { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint); }
@@ -388,7 +388,7 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.03;
 .proc-item:last-child { border-bottom: 1px solid var(--line); }
 .proc-item:hover { padding-left: 8px; }
 .proc-item .p-body h3 { margin-bottom: 10px; }
-.proc-item .p-body p { color: var(--text-dim); font-size: 15.5px; max-width: 52ch; }
+.proc-item .p-body p { color: var(--text-dim); font-size: 16px; max-width: 52ch; }
 .proc-item .p-ic { display: inline-flex; margin-bottom: 14px; width: 46px; height: 46px; border-radius: 12px; align-items: center; justify-content: center; background: var(--accent-soft); color: var(--accent); border: 1px solid var(--line); }
 .proc-item .p-ic svg { width: 22px; height: 22px; }
 .flex-banner {
@@ -401,13 +401,13 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.03;
 }
 .flex-banner .fb-txt { max-width: 60ch; }
 .flex-banner h3 { font-family: var(--font-head); font-size: clamp(24px, 2.6vw, 34px); font-weight: 500; letter-spacing: -0.018em; }
-.flex-banner p { color: var(--text-dim); margin-top: 12px; font-size: 15.5px; }
+.flex-banner p { color: var(--text-dim); margin-top: 12px; font-size: 16px; }
 .flex-banner .chips { margin-top: 20px; }
 .flex-banner .btn { flex: none; }
 
 /* ─── Depoimentos ────────────────────────────────────────────────────────── */
 .tst-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 18px; margin-top: 56px; align-items: stretch; }
-.tst { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; display: flex; flex-direction: column; gap: 22px; transition: border-color 0.3s, transform 0.3s var(--ease); }
+.tst { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--card-pad); display: flex; flex-direction: column; gap: 22px; transition: border-color 0.3s, transform 0.3s var(--ease); }
 .tst:hover { border-color: var(--line-2); transform: translateY(-4px); }
 .tst.feat { background: linear-gradient(155deg, var(--surface-2), var(--surface)); }
 .tst .quote { font-family: var(--font-head); font-size: clamp(18px, 1.7vw, 22px); line-height: 1.42; letter-spacing: -0.01em; }
@@ -415,7 +415,7 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.03;
 .tst .stars { color: var(--accent); font-size: 13px; letter-spacing: 3px; }
 .tst .who { display: flex; align-items: center; gap: 13px; margin-top: auto; }
 .tst .who .av { width: 46px; height: 46px; border-radius: 50%; background: var(--accent-soft); border: 1px solid var(--line-2); display: grid; place-items: center; font-family: var(--font-head); color: var(--accent); font-size: 18px; }
-.tst .who .nm { font-weight: 700; font-size: 14.5px; }
+.tst .who .nm { font-weight: 700; font-size: var(--fs-sm); }
 .tst .who .rl { font-family: var(--font-mono); font-size: 11px; color: var(--text-dim); letter-spacing: 0.03em; margin-top: 2px; }
 
 /* ─── CTA band ───────────────────────────────────────────────────────────── */
