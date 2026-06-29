@@ -67,13 +67,13 @@ body > main, body > .ticker, body > footer, body > header, body > .marquee-big {
 
 h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.03; letter-spacing: -0.018em; }
 .display {
-  font-size: clamp(46px, 8.4vw, 132px);
+  font-size: var(--fs-display);
   font-weight: 440; line-height: 0.96; letter-spacing: -0.03em;
 }
 .display .em { font-style: italic; color: var(--accent); font-weight: 460; }
-.h2 { font-size: clamp(32px, 4.8vw, 64px); font-weight: 460; letter-spacing: -0.025em; line-height: 1.0; }
-.h3 { font-size: clamp(21px, 2.2vw, 28px); font-weight: 520; letter-spacing: -0.012em; line-height: 1.14; }
-.lead { font-size: clamp(17px, 1.45vw, 21px); color: var(--text-dim); max-width: 58ch; line-height: 1.62; }
+.h2 { font-size: var(--fs-h2); font-weight: 460; letter-spacing: -0.025em; line-height: 1.0; }
+.h3 { font-size: var(--fs-h3); font-weight: 520; letter-spacing: -0.012em; line-height: 1.14; }
+.lead { font-size: var(--fs-lead); color: var(--text-dim); max-width: 58ch; line-height: 1.62; }
 .muted { color: var(--text-dim); }
 
 /* ─── Buttons ────────────────────────────────────────────────────────────── */
@@ -97,8 +97,8 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.03;
 .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 20px 48px -14px rgba(205, 169, 79, 0.8); }
 .btn-ghost { background: transparent; color: var(--text); border-color: var(--line-2); }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); }
-.btn-lg { padding: 19px 36px; font-size: 16.5px; }
-.btn-sm { padding: 11px 19px; font-size: 13.5px; }
+.btn-lg { padding: 19px 36px; font-size: var(--fs-card-title); }
+.btn-sm { padding: 11px 19px; font-size: 14px; }
 
 /* ─── Header ─────────────────────────────────────────────────────────────── */
 .header {
@@ -128,15 +128,15 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.03;
 .wordmark .a { color: var(--gold); }
 .wordmark .b { color: var(--green-1); }
 :root[data-theme='light'] .wordmark .b { color: var(--green); }
-.logo .sub { font-family: var(--font-mono); font-size: 8.5px; letter-spacing: 0.44em; color: var(--text-dim); margin-top: 3px; padding-left: 1px; }
+.logo .sub { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.44em; color: var(--text-dim); margin-top: 3px; padding-left: 1px; }
 
 .nav { display: flex; align-items: center; gap: 2px; }
-.nav a { font-size: 14.5px; font-weight: 500; color: var(--text-dim); padding: 9px 15px; border-radius: 8px; transition: color 0.2s, background 0.2s; }
+.nav a { font-size: 15px; font-weight: 500; color: var(--text-dim); padding: 9px 15px; border-radius: 8px; transition: color 0.2s, background 0.2s; }
 .nav a:hover { color: var(--text); background: var(--accent-soft); }
 .header-cta { display: flex; align-items: center; gap: 14px; }
 
 .burger {
-  display: none; width: 40px; height: 40px; border: 1px solid var(--line-2);
+  display: none; width: 44px; height: 44px; border: 1px solid var(--line-2);
   border-radius: 100px; background: transparent; color: var(--accent);
   align-items: center; justify-content: center; flex-direction: column; gap: 5px;
   transition: border-color 0.2s, color 0.2s;
