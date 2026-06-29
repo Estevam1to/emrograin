@@ -1,4 +1,3 @@
-import emblem from '../../assets/emblem.png';
 import { SITE, FOOTER_COLS } from '../../lib/content';
 import { scrollToHash } from '../../lib/utils';
 
@@ -47,9 +46,6 @@ export default function Footer() {
         <div className="footer-top">
           <div className="f-col brand">
             <a href="/" className="logo" aria-label={`${SITE.name} — início`}>
-              <div className="mark">
-                <img src={emblem} alt="" width="48" height="48" loading="lazy" />
-              </div>
               <div className="wm">
                 <span className="wordmark">
                   <span className="a">Emro</span><span className="b">Grain</span>
@@ -87,12 +83,16 @@ export default function Footer() {
             {' '}Fotos: <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Unsplash</a>
           </p>
           <div className="soc">
-            <a href={SITE.social.instagram} aria-label="Instagram" rel="noopener noreferrer" target="_blank">
-              <IconInstagram />
-            </a>
-            <a href={SITE.social.linkedin} aria-label="LinkedIn" rel="noopener noreferrer" target="_blank">
-              <IconLinkedIn />
-            </a>
+            {SITE.social.instagram !== '#' && (
+              <a href={SITE.social.instagram} aria-label="Instagram" rel="noopener noreferrer" target="_blank">
+                <IconInstagram />
+              </a>
+            )}
+            {SITE.social.linkedin !== '#' && (
+              <a href={SITE.social.linkedin} aria-label="LinkedIn" rel="noopener noreferrer" target="_blank">
+                <IconLinkedIn />
+              </a>
+            )}
             <a href={SITE.social.whatsapp} aria-label="WhatsApp" rel="noopener noreferrer" target="_blank">
               <IconWhatsApp />
             </a>

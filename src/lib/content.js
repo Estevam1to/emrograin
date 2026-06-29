@@ -4,15 +4,15 @@
 export const SITE = {
   name: 'EmroGrain Commodities',
   email: 'comercial@emrograin.com.br',
-  phone: '+55 (00) 0000-0000',
-  phoneHref: 'tel:+550000000000',
-  address: '[Cidade / UF — endereço]',
+  phone: '+55 (99) 98408-0468',
+  phoneHref: 'tel:+5599984080468',
+  address: '',
   hours: 'Seg–Sex · 8h às 18h',
   tagline: 'Conectando o campo ao mercado. Gerando valor para o futuro.',
   social: {
     instagram: '#',
     linkedin: '#',
-    whatsapp: '#',
+    whatsapp: 'https://wa.me/5599984080468',
   },
 };
 
@@ -30,7 +30,7 @@ export const HERO = {
   headlineEmPrefix: 'ao ',
   headlineEm: 'mercado certo',
   headlineSuffix: '.',
-  lead: 'A EmroGrain intermedia a compra e a venda de soja e milho — conectando o produtor aos grandes compradores com a estrutura certa para cada negócio, e cotações acompanhadas em tempo real.',
+  lead: 'Intermediamos soja e milho — do produtor aos grandes compradores, com transparência e condições que cabem na sua safra.',
   cta: { href: '#contato', label: 'Falar com o comercial' },
   ctaSecondary: { href: '#commodities', label: 'Nossas commodities' },
   stats: [
@@ -42,21 +42,17 @@ export const HERO = {
 export const MARKET_PANEL = {
   heading: 'Mercado · agora',
   rows: [
-    { sym: 'EURBRL', label: 'EURO · EUR-BRL',   unit: 'por 1 EUR' },
-    { sym: 'CNYBRL', label: 'YUAN · CHINA',      unit: 'por 1 CNY' },
-    { sym: 'ZS=F',   label: 'SOJA · CBOT',       unit: '/tonelada' },
-    { sym: 'ZC=F',   label: 'MILHO · CBOT',      unit: '/tonelada' },
+    { sym: 'EURBRL', label: 'EURO · EUR-BRL', unit: 'por 1 EUR' },
+    { sym: 'CNYBRL', label: 'YUAN · CHINA',   unit: 'por 1 CNY' },
   ],
   heroUsdUnit: 'por 1 USD',
-  footer: 'Moedas ao vivo · grãos CBOT indicativos · atualização contínua',
+  footer: 'Câmbio ao vivo · atualização contínua',
 };
 
 export const TICKER_ITEMS = [
   { sym: 'USDBRL', label: 'DÓLAR',        unit: 'por 1 USD' },
   { sym: 'EURBRL', label: 'EURO',         unit: 'por 1 EUR' },
   { sym: 'CNYBRL', label: 'YUAN · CHINA', unit: 'por 1 CNY' },
-  { sym: 'ZS=F',   label: 'SOJA CBOT',   unit: '/t' },
-  { sym: 'ZC=F',   label: 'MILHO CBOT',  unit: '/t' },
 ];
 
 export const MARQUEE_ITEMS = [
@@ -111,7 +107,7 @@ export const COMMODITIES = {
       imgAlt: 'Grãos de soja dourados em close — close-up macro',
       imgTag: 'foto: grãos de soja em macro',
       tag: 'Grão · Farelo',
-      market: 'CBOT · ZS',
+      market: 'Mercado interno',
       name: 'Soja',
       body: 'A base da nossa operação. Grão e farelo conectados aos maiores compradores do mercado nacional.',
       specs: [
@@ -126,7 +122,7 @@ export const COMMODITIES = {
       imgAlt: 'Grãos de milho dourado durante colheita',
       imgTag: 'foto: espigas e grãos de milho',
       tag: 'Grão · Indústria · Ração',
-      market: 'CBOT · ZC',
+      market: 'Mercado interno',
       name: 'Milho',
       body: 'Milho em grão para a indústria e a produção de ração — com originação no campo e escoamento eficiente pelo mercado interno.',
       specs: [
@@ -143,7 +139,7 @@ export const PROCESSO = {
   eyebrow: { idx: '04', text: 'Como atuamos' },
   headline: 'Intermediação que se adapta à sua safra.',
   lead: 'Conectamos quem produz a quem compra — e montamos cada negócio do jeito que faz mais sentido para você. Sem fórmula fixa.',
-  ctaLabel: 'Conversar com o time',
+  ctaLabel: 'Montar minha proposta',
   steps: [
     {
       idx: '01',
@@ -202,7 +198,7 @@ export const CTA_BAND = {
   eyebrow: 'Vamos negociar a sua safra',
   headline: 'Receba uma proposta sob medida.',
   lead: 'Conte sobre a sua produção e o nosso time comercial retorna em até 24 horas úteis — sem intermediários.',
-  cta: { href: '#contato', label: 'Falar com o comercial' },
+  cta: { href: '#contato', label: 'Negociar minha safra agora' },
   ctaSecondary: { href: '#commodities', label: 'Ver commodities' },
 };
 
@@ -210,12 +206,7 @@ export const CONTATO = {
   eyebrow: { idx: '06', text: 'Vamos conversar' },
   headline: 'Fale com o nosso time comercial.',
   lead: 'Conte sobre a sua safra e receba uma proposta sob medida. Atendimento direto, sem intermediários.',
-  submitLabel: 'Falar com o comercial',
   legal: 'Ao enviar, você concorda em ser contatado pelo time comercial da EmroGrain.',
-  success: {
-    title: 'Recebemos o seu contato!',
-    body: 'Nosso time comercial vai retornar em até 24 horas úteis. Obrigado pela confiança.',
-  },
   volumeOptions: [
     'Até 500 toneladas',
     '500 a 2.000 toneladas',

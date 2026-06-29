@@ -49,7 +49,6 @@ export default function Processo() {
           <div className="proc-list">
             {p.steps.map((step, i) => (
               <Reveal key={step.idx} delay={i % 3} as="article" className="proc-item">
-                <span className="p-ix" aria-hidden="true">{step.idx}</span>
                 <div className="p-body">
                   <div className="p-ic">{ICONS[step.icon]}</div>
                   <h3 className="h3">{step.title}</h3>

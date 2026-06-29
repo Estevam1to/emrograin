@@ -17,7 +17,8 @@ export default function Navbar() {
   // Prevent body scroll while mobile menu is open
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    document.body.classList.toggle('menu-open', open);
+    return () => { document.body.style.overflow = ''; document.body.classList.remove('menu-open'); };
   }, [open]);
 
   const handleNavClick = (e, href) => {
@@ -83,6 +84,10 @@ export default function Navbar() {
         <Button href="#contato" onClick={(e) => handleNavClick(e, '#contato')} tabIndex={open ? 0 : -1}>
           Falar com o comercial
         </Button>
+        <div className="mm-foot">
+          <a href={`mailto:${SITE.email}`} tabIndex={open ? 0 : -1}>{SITE.email}</a>
+          <a href={SITE.phoneHref} tabIndex={open ? 0 : -1}>{SITE.phone}</a>
+        </div>
       </nav>
     </>
   );
