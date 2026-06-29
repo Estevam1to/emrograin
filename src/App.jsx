@@ -57,6 +57,7 @@ export default function App() {
         <MarqueeBig />
         <Commodities />
         <Processo />
+        <MarqueeBig />
         <Depoimentos />
         <CTABand />
         <Contato />
