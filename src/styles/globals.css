@@ -334,7 +334,7 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.03;
   transition: border-color 0.35s var(--ease), transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
 }
 .tile:hover { border-color: var(--line-2); transform: translateY(-4px); box-shadow: var(--shadow); }
-.tile .t-k { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-faint); }
+.tile .t-k { font-family: var(--font-mono); font-size: var(--fs-label); letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-faint); }
 .tile .t-num { font-family: var(--font-head); font-size: clamp(40px, 5vw, 68px); font-weight: 500; line-height: 0.95; letter-spacing: -0.03em; margin-top: 10px; }
 .tile .t-num .u { color: var(--accent); }
 .tile .t-lab { color: var(--text-dim); font-size: 14px; margin-top: 12px; }
@@ -354,7 +354,7 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.03;
 .value .v-ic { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); border: 1px solid var(--line); }
 .value .v-ic svg { width: 19px; height: 19px; }
 .value h3 { font-family: var(--font-body); font-size: var(--fs-card-title); font-weight: 700; letter-spacing: 0; }
-.value p { font-size: 14.5px; color: var(--text-dim); }
+.value p { font-size: var(--fs-sm); color: var(--text-dim); }
 
 /* ─── Commodities ────────────────────────────────────────────────────────── */
 .commodity-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 56px; }
@@ -376,7 +376,7 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.03;
 .commodity .specs { display: grid; gap: 1px; margin-top: 24px; background: var(--line); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .commodity .spec { background: var(--surface); display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 13px 2px; }
 .commodity .spec .sk { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint); }
-.commodity .spec .sv { font-size: 14.5px; color: var(--text); font-weight: 500; text-align: right; }
+.commodity .spec .sv { font-size: var(--fs-sm); color: var(--text); font-weight: 500; text-align: right; }
 .commodity .chips { margin-top: 22px; }
 
 /* ─── Processo ───────────────────────────────────────────────────────────── */
@@ -458,7 +458,7 @@ h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.03;
 .field .msg { font-size: 12px; color: var(--red); margin-top: 6px; display: none; }
 .field.err .msg { display: block; }
 .form .btn { width: 100%; justify-content: center; margin-top: 6px; }
-.form .legal { font-size: 12.5px; color: var(--text-faint); margin-top: 14px; text-align: center; }
+.form .legal { font-size: 13px; color: var(--text-faint); margin-top: 14px; text-align: center; }
 .form-success { display: none; flex-direction: column; align-items: center; text-align: center; gap: 14px; padding: 36px 10px; }
 .form-success.show { display: flex; }
 .form-success .ok { width: 66px; height: 66px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--green-1); border: 1px solid var(--line-2); }
